@@ -35,9 +35,9 @@ function App() {
   };
 
   return (
-    <div className="h-screen flex items-center">
+    <div className="h-screen w-full relative flex">
       <Player playerId="x" activePlayer={player} score={scores.x} />
-      <section className="absolute w-80 left-1/2 -translate-x-40 flex flex-col items-center gap-16">
+      <section className="absolute w-80 top-52 lg:top-40 left-1/2 -translate-x-40 flex flex-col items-center gap-12 lg:gap-16">
         <Board
           board={board}
           winner={winner}
