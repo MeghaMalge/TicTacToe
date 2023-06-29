@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="h-screen w-full relative flex">
-      <Player playerId="x" activePlayer={player} score={scores.x} />
+      <Player playerId="x" activePlayer={player === "x"} score={scores.x} winner={winner}/>
       <section className="absolute w-80 top-52 lg:top-40 left-1/2 -translate-x-40 flex flex-col items-center gap-12 lg:gap-16">
         <Board
           board={board}
@@ -68,7 +68,7 @@ function App() {
           </button>
         </div>
       </section>
-      <Player playerId="o" activePlayer={player} score={scores.o} />
+      <Player playerId="o" activePlayer={player === "o"} score={scores.o} winner={winner}/>
     </div>
   );
 }

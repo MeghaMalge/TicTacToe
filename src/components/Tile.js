@@ -9,7 +9,7 @@ export const Tile = ({ value, onClick, bg }) => {
           : value === "o"
           ? "bg-red-300"
           : "bg-gray-200"
-      } flex justify-center items-center rounded-lg shadow-xl shadow-black hover:scale-105 transition-all duration-300 text-6xl font-bold text-center uppercase`}
+      } flex justify-center items-center rounded-lg shadow-xl shadow-black ${bg && "scale-110"} hover:scale-105 transition-all duration-300 text-6xl font-bold text-center uppercase`}
       onClick={onClick}
     >
       {value}
