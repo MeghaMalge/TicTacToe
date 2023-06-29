@@ -5,9 +5,11 @@ export const Player = ({ playerId, activePlayer, score, winner }) => {
     <div
       className={`flex flex-col items-center xl:justify-center gap-11 bg-${
         playerId === "x" ? "blue" : "red"
-      }-${winner || activePlayer ? "300" : "100"} w-1/2 h-screen ${winner || activePlayer ? "text-black" : "text-gray-500"}`}
+      }-${winner || activePlayer ? "300 text-black" : " text-gray-500"} w-1/2 h-screen`}
     >
-      <span className={`text-3xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mt-6 `}>
+      <span
+        className={`text-3xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mt-6 `}
+      >
         Player {playerId === "x" ? 1 : 2}
       </span>
       <span className="md:-ml-10 lg:-ml-20 text-lg font-bold">
